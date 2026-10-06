@@ -1,0 +1,33 @@
+/* ================= MAIN LAYOUT ================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--background);
+}
+
+/* SIDEBAR SPACE */
+.app-layout .sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* DASHBOARD AREA */
+.app-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  margin-left: 240px; /* ✅ only add this one line */
+}
+
+/* ================= COACH DARK THEME ================= */
+
+.coach-theme {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #ffffff;
+}
+
+.coach-theme .app-content {
+  background: transparent;
+}

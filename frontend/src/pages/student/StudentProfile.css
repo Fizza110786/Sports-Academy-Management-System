@@ -1,0 +1,124 @@
+.modern-profile {
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  margin-bottom: 25px;
+}
+
+body.light .profile-header {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.profile-header h2 {
+  margin: 0;
+}
+
+.edit-toggle {
+  margin-left: auto;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #f97316;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.profile-section {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+}
+
+body.light .profile-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.info-grid label {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.info-grid input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: inherit;
+  margin-top: 4px;
+}
+
+.save-modern {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #f97316;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stat-box {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  text-align: center;
+}
+
+body.light .stat-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-box span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f97316;
+}

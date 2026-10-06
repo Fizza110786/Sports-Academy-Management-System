@@ -1,0 +1,137 @@
+.coach-profile-container {
+  padding: 24px;
+}
+
+/* HEADER */
+.coach-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  margin-bottom: 25px;
+}
+
+body.light .coach-profile-header {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.coach-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.coach-info h2 {
+  margin: 0;
+}
+
+.coach-edit-btn {
+  margin-left: auto;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #f97316;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* MAIN GRID */
+.coach-profile-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+/* PROFILE CARD */
+.coach-profile-card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+}
+
+body.light .coach-profile-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.coach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.coach-grid label {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.coach-grid input,
+.coach-grid textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: inherit;
+  margin-top: 4px;
+}
+
+.coach-grid textarea {
+  min-height: 80px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.coach-save-btn {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #f97316;
+  color: white;
+  cursor: pointer;
+}
+
+/* STATS */
+.coach-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.coach-stat-box {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  text-align: center;
+}
+
+body.light .coach-stat-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.coach-stat-box span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f97316;
+}

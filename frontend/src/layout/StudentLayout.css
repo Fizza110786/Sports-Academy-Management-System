@@ -1,0 +1,12 @@
+.student-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.student-main {
+  flex: 1;
+  padding: 24px;
+  background: var(--bg);
+  overflow-y: auto;
+}

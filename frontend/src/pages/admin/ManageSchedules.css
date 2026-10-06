@@ -1,0 +1,267 @@
+/* ===================================================
+   LAYOUT
+=================================================== */
+.schedule-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+
+/* ===================================================
+   CALENDAR CARD
+=================================================== */
+.calendar-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.calendar-card h3 {
+  margin-bottom: 10px;
+}
+
+
+/* ===================================================
+   CALENDAR GRID
+=================================================== */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+
+
+/* ===================================================
+   DAY BUTTON
+=================================================== */
+.day {
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day:hover {
+  transform: translateY(-2px);
+  border-color: #ff7a18;
+}
+
+.day.active {
+  background: #ff7a18;
+  color: white;
+  border-color: #ff7a18;
+}
+
+
+/* ===================================================
+   PROGRAM FILTER
+=================================================== */
+.program-filter {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+}
+
+
+/* ===================================================
+   SESSIONS HEADER
+=================================================== */
+.sessions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.count {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+
+/* ===================================================
+   SESSION CARD (FIXED SPACING)
+=================================================== */
+.session-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;          /* controlled spacing */
+
+  background: var(--card);
+  padding: 16px 20px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+
+  font-size: 16px;    /* bigger text */
+}
+
+
+/* ===================================================
+   TITLE
+=================================================== */
+.session-title {
+  font-weight: 600;
+  min-width: 140px;
+}
+
+
+/* ===================================================
+   COACH
+=================================================== */
+.session-coach {
+  opacity: 0.75;
+  min-width: 120px;
+}
+
+
+/* ===================================================
+   TIME
+=================================================== */
+.session-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+}
+
+
+/* ===================================================
+   LOCATION
+=================================================== */
+.session-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+}
+
+
+/* ===================================================
+   STATUS
+=================================================== */
+.status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+}
+
+.status.ongoing {
+  background: #22c55e;
+}
+
+.status.upcoming {
+  background: #3b82f6;
+}
+
+.status.completed {
+  background: gray;
+}
+
+
+/* ===================================================
+   DELETE BUTTON
+=================================================== */
+.action-btn.delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 18px;
+  margin-left: auto;   /* push delete icon to end */
+}
+
+.action-btn.delete:hover {
+  transform: scale(1.15);
+}
+
+
+/* ===================================================
+   NO DATA
+=================================================== */
+.no-data {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+}
+
+
+/* ===================================================
+   MODAL BACKGROUND (BLUR)
+=================================================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+
+/* ===================================================
+   MODAL BOX
+=================================================== */
+.modal-content {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 14px;
+  width: 420px;
+  border: 1px solid var(--border);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* ===================================================
+   MODAL INPUTS
+=================================================== */
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+
+/* ===================================================
+   MODAL ACTIONS
+=================================================== */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}

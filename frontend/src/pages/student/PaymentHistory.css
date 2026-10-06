@@ -1,0 +1,115 @@
+.payment-history-page {
+  padding: 20px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.page-header p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* CARD */
+
+.history-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+body.light .history-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+/* TABLE */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  text-align: left;
+}
+
+th {
+  padding: 14px 10px;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.8;
+  border-bottom: 1px solid #1e293b;
+}
+
+body.light th {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+  padding: 14px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #1e293b;
+}
+
+body.light td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* STATUS BADGES */
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.paid {
+  background: #22c55e;
+  color: white;
+}
+
+.status.pending {
+  background: #facc15;
+  color: #000;
+}
+
+/* DOWNLOAD */
+
+.download-icon {
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.download-icon:hover {
+  transform: scale(1.1);
+}
+.status.verified {
+  background: #22c55e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.status.pending {
+  background: #f59e0b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.status.rejected {
+  background: #ef4444;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}

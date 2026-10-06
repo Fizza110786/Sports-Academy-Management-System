@@ -1,0 +1,316 @@
+/* =====================================================
+   RESET + BASE
+===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--bg);
+  color: var(--text);
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* =====================================================
+   THEME VARIABLES
+===================================================== */
+body.light {
+  --bg: #ffffff;
+  --text: #111827;
+  --card: #f9fafb;
+  --border: #e5e7eb;
+  --primary: #ff7a18;
+  --hover: #fff3e8;
+}
+
+body.dark {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --card: #020617;
+  --border: #1e293b;
+  --primary: #ff7a18;
+  --hover: #1f2937;
+}
+
+/* =====================================================
+   GLOBAL LAYOUT (THIS FIXES COLLAPSE)
+===================================================== */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-content {
+  margin-left: 260px;              /* sidebar width */
+  width: calc(100% - 260px);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* HEADER */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.logo {
+  background: var(--primary);
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+}
+
+/* ROLE */
+.current-role {
+  padding: 0 20px 16px;
+}
+
+.current-role span {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.role-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  background: var(--primary);
+  color: white;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* THEME ICON */
+.theme-icon {
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.theme-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* MENU */
+.sidebar-menu {
+  flex: 1;
+  padding: 10px;
+}
+
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+  background: var(--hover);
+  transform: translateX(4px);
+}
+
+.sidebar-menu a.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* FOOTER */
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.logout-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 8px;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #ef444420;
+}
+
+/* =====================================================
+   DASHBOARD (ADMIN / COACH / STUDENT)
+===================================================== */
+.admin-dashboard {
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* CONTENT GRID */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* FAKE CHART */
+.fake-chart {
+  height: 200px;
+  background: linear-gradient(180deg, #ff7a1830, transparent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ATTENDANCE */
+.attendance-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px auto;
+}
+
+/* TABLE */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* BADGES */
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.badge.active {
+  background: #22c55e;
+  color: white;
+}
+
+.badge.pending {
+  background: #64748b;
+  color: white;
+}
+body.light .sidebar {
+  background: #ffffff;
+}
+
+body.light .sidebar-menu a {
+  color: #111827;      /* dark readable text */
+}
+
+body.light .sidebar-menu a:hover {
+  background: rgba(255, 122, 24, 0.15);
+  color: #ff7a18;
+}

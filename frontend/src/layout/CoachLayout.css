@@ -1,0 +1,12 @@
+.coach-layout{
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.coach-main {
+  flex: 1;
+  padding: 24px;
+  background: var(--bg);
+  overflow-y: auto;
+}

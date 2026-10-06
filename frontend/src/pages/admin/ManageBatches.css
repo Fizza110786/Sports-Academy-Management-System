@@ -1,0 +1,187 @@
+/* ===================================================
+   FORCE TRUE FULLSCREEN MODAL (ABOVE SIDEBAR)
+=================================================== */
+
+.modal {
+  position: fixed !important;
+  inset: 0 !important;
+
+  background: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(8px) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  z-index: 2147483647 !important;
+  isolation: isolate;
+}
+
+/* ===================================================
+   MODAL BOX
+=================================================== */
+
+.modal-content {
+  position: relative;
+  background: white;
+  width: 650px;
+  max-width: 90%;
+  max-height: 85vh;
+
+  border-radius: 16px;
+  padding: 30px;
+
+  overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+
+  animation: modalFade 0.25s ease;
+}
+
+.modal-content.large {
+  width: 750px;
+}
+
+@keyframes modalFade {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===================================================
+   TABLE WRAPPER
+=================================================== */
+
+.table-wrapper {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+/* ===================================================
+   TABLE FIX
+=================================================== */
+
+.data-table {
+  min-width: 900px;
+  table-layout: fixed;
+}
+
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) { width: 160px; }
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) { width: 160px; }
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) { width: 130px; }
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) { width: 90px; }
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) { width: 120px; }
+
+.data-table th:nth-child(6),
+.data-table td:nth-child(6) { width: 130px; }
+
+.data-table th:nth-child(7),
+.data-table td:nth-child(7) { width: 100px; }
+
+.data-table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.data-table td:nth-child(5) {
+  white-space: normal;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ===================================================
+   USER CARD
+=================================================== */
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f3f4f6;
+}
+
+/* ===================================================
+   MODAL ACTIONS
+=================================================== */
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* ===================================================
+   ACTION BUTTONS  ✅ ADDED
+=================================================== */
+
+.action-btns {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.prog-edit-btn {
+  background: #ff7a18 !important;
+  border: none !important;
+  color: white !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 15px !important;
+  transition: all 0.2s ease !important;
+}
+
+.prog-edit-btn:hover {
+  background: #e96d00 !important;
+  transform: scale(1.1) !important;
+}
+
+.prog-delete-btn {
+  background: #ef4444 !important;
+  border: none !important;
+  color: white !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 15px !important;
+  transition: all 0.2s ease !important;
+}
+
+.prog-delete-btn:hover {
+  background: #dc2626 !important;
+  transform: scale(1.1) !important;
+}

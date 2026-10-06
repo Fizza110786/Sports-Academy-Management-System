@@ -1,0 +1,96 @@
+/* table wrapper */
+.fee-table {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* actions */
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.action-btn.edit {
+  color: #3b82f6;
+}
+
+.action-btn.delete {
+  color: #ef4444;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 14px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--border);
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
+/* revenue cards */
+.revenue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.revenue-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.revenue-card p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.revenue-card h2 {
+  margin: 0;
+}
+
+.green { color: #22c55e; }
+.orange { color: #f97316; }
+.red { color: #ef4444; }

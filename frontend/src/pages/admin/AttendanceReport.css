@@ -1,0 +1,185 @@
+/* ================================
+   LAYOUT
+================================ */
+.attendance-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+/* ================================
+   CALENDAR
+================================ */
+.calendar-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.day {
+  aspect-ratio: 1;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.day.active {
+  background: #ff7a18;
+  color: white;
+}
+
+/* ================================
+   FILTERS
+================================ */
+.attendance-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.attendance-filters select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  min-width: 200px;
+}
+
+/* ================================
+   TABLE WRAPPER
+================================ */
+.attendance-table {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* ================================
+   BATCH SECTION
+================================ */
+.batch-section {
+  margin-top: 20px;
+}
+
+/* ✅ batch name as bold header row */
+.batch-header {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f97316;
+  padding: 8px 4px;
+  border-bottom: 2px solid #f97316;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ================================
+   TABLE
+================================ */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 4px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) {
+  min-width: 200px;
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+  min-width: 100px;
+}
+
+/* ================================
+   STUDENT CELL
+================================ */
+.student-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.attendance-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.avatar-placeholder {
+  background: #f97316;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.student-name {
+  color: var(--text);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================================
+   BADGES
+================================ */
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  display: inline-block;
+  min-width: 70px;
+  text-align: center;
+}
+
+.badge.present {
+  background: #22c55e;
+}
+
+.badge.absent {
+  background: #ef4444;
+}
+
+.badge.late {
+  background: #facc15;
+  color: black;
+}
+
+/* ================================
+   NO DATA
+================================ */
+.no-data {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}

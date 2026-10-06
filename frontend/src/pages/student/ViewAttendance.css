@@ -1,0 +1,197 @@
+.attendance-page {
+  padding-top: 10px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+/* ================= CONTAINER ================= */
+
+.attendance-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 25px;
+}
+
+.attendance-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ================= CARD ================= */
+
+.attendance-card {
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+}
+
+body.light .attendance-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+/* ================= CALENDAR ================= */
+
+.calendar-wrapper {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.calendar-month-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.calendar-month-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.calendar-arrow {
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.calendar-arrow:hover {
+  opacity: 1;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  background: #1e293b;
+}
+
+body.light .calendar-day {
+  background: #f1f5f9;
+}
+
+.calendar-day:hover {
+  background: #334155;
+}
+
+body.light .calendar-day:hover {
+  background: #e2e8f0;
+}
+
+.calendar-day.present {
+  background: #22c55e;
+  color: white;
+}
+
+.calendar-day.absent {
+  background: #ef4444;
+  color: white;
+}
+
+/* ================= OVERALL ATTENDANCE ================= */
+
+.attendance-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attendance-badge {
+  background: #22c55e;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+}
+
+.attendance-bar {
+  height: 8px;
+  border-radius: 20px;
+  background: #1e293b;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+body.light .attendance-bar {
+  background: #e2e8f0;
+}
+
+.attendance-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+
+/* ================= RECENT RECORDS ================= */
+
+.record-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 10px;
+  background: #1e293b;
+}
+
+body.light .record-item {
+  background: #f1f5f9;
+}
+
+.record-status {
+  font-weight: bold;
+}
+
+.status-present {
+  color: #22c55e;
+}
+
+.status-absent {
+  color: #ef4444;
+}
+
+.calendar-day.late {
+  background: #f59e0b;
+  color: white;
+  border-radius: 50%;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.status-late {
+  color: #f59e0b;
+}

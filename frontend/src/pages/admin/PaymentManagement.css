@@ -1,0 +1,126 @@
+/* ================= REVENUE CARDS ================= */
+.payment-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.green { color: #22c55e; }
+.orange { color: #f59e0b; }
+.red { color: #ef4444; }
+
+/* ================= SEARCH ================= */
+.search {
+  width: 320px;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+/* ================= TABLE ================= */
+.payment-table {
+  background: var(--card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* ================= BADGES ================= */
+.badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: white;
+}
+
+.badge.verified { background: #22c55e; }
+.badge.pending { background: #f59e0b; }
+.badge.rejected { background: #ef4444; }
+
+/* ================= ACTIONS ================= */
+.actions svg {
+  margin-right: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.actions svg:hover {
+  transform: scale(1.15);
+}
+
+/* =======================================================
+   QR MODAL SYSTEM 
+======================================================= */
+
+/* overlay */
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;   /* 🔥 ensures it stays on top */
+}
+
+/* popup card */
+.qr-card {
+  width: 380px;
+  background: var(--card);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* white frame for QR */
+.qr-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 18px 0;
+}
+
+/* academy upi */
+.upi {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+/* amount highlight */
+.amount-pill {
+  background: #ff7a18;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+}
