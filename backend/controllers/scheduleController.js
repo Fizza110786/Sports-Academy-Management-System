@@ -1,38 +1,36 @@
 const Schedule = require("../models/Schedule");
+const mongoose = require("mongoose");
 
 // ================= GET =================
 exports.getSchedules = async (req, res) => {
   try {
     const user = req.user;
-
     let query = {};
 
-    // ✅ SAFE CHECK (THIS IS THE FIX)
     if (user) {
-      // ✅ ADMIN → all schedules
       if (user.role === "admin") {
         query = {};
       }
-
-      // ✅ COACH → only their schedules
       if (user.role === "coach") {
-        query.coach = user._id;
+        query.coach = new mongoose.Types.ObjectId(user._id);
       }
-
-      // ✅ STUDENT → only their batch schedules
-      if (user.role === "student") {
-        query.batch = user.batch;
+      if (user.role === "student" && user.batch) {
+        query.batch = new mongoose.Types.ObjectId(user.batch);
+      }
+    } else {
+      const { studentBatch } = req.query;
+      if (studentBatch && mongoose.Types.ObjectId.isValid(studentBatch)) {
+        query.batch = new mongoose.Types.ObjectId(studentBatch);
       }
     }
 
-    // ✅ IF NO USER → return all (prevents crash)
     const schedules = await Schedule.find(query)
       .populate("coach", "name")
       .populate("batch", "name");
 
     res.json(schedules);
   } catch (err) {
-    console.error("SCHEDULE ERROR:", err); // ✅ debug
+    console.error("SCHEDULE ERROR:", err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -56,6 +54,7 @@ exports.deleteSchedule = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
 // ================= UPDATE =================
 exports.updateSchedule = async (req, res) => {
   try {

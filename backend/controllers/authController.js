@@ -43,7 +43,6 @@ exports.login = async (req, res) => {
       { expiresIn: "1d" }
     );
 
-    // ✅ IMPORTANT: Send _id (NOT id)
     res.json({
       token,
       user: {
@@ -51,6 +50,7 @@ exports.login = async (req, res) => {
         name: user.name,
         email: user.email,
         role: user.role,
+        batch: user.batch || null, // ✅ ADDED
       },
     });
 

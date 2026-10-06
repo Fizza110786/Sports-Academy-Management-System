@@ -32,6 +32,7 @@ const feeRoutes = require("./routes/feeRoutes");         // ✅ ADDED
 const paymentRoutes = require("./routes/paymentRoutes"); // ✅ ADDED
 const performanceRoutes = require("./routes/performanceRoutes"); // ✅ ADD
 const materialRoutes = require("./routes/materialRoutes"); // ✅ ADD
+const progressRoutes = require("./routes/progressRoutes");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/batches", batchRoutes);
@@ -46,6 +47,7 @@ app.use("/api/fees", feeRoutes);         // ✅ ADDED
 app.use("/api/payments", paymentRoutes); // ✅ ADDED
 app.use("/api/performance", performanceRoutes); // ✅ ADD
 app.use("/api/materials", materialRoutes); // ✅ ADD
+app.use("/api/progress", progressRoutes);      
 
 // ================= START SERVER =================
 const PORT = 5000;

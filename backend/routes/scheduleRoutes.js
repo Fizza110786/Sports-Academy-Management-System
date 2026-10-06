@@ -8,10 +8,9 @@ const {
   updateSchedule,
 } = require("../controllers/scheduleController");
 
-// ✅ NO protect — authMiddleware handles filtering via req.user if token exists
-router.get("/", getSchedules);
+router.get("/", getSchedules);  // ← removed protect, handled in controller via query param
 router.post("/", createSchedule);
-router.put("/:id", updateSchedule); // ✅ ADDED
+router.put("/:id", updateSchedule);
 router.delete("/:id", deleteSchedule);
 
 module.exports = router;
